@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Quiet Mind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      /* Global Reset & Typography */
+      :root {
+        /* Light Mode (Bone White) */
+        --bg-main: #FAFAF7;
+        --bg-card: #FFFFFF;
+        --bg-secondary: #fcfcfb;
+        --bg-hover: #f0f0ea;
+        
+        --text-main: #0F0F0F;     /* Ink Black */
+        --text-body: #44403c;     /* Charcoal */
+        --text-muted: #78716c;    /* Stone */
+        --text-faint: #D7D7D0;    /* Light Gray */
+        
+        --border-main: #D7D7D0;
+        --border-strong: #0F0F0F;
+        
+        --pattern-opacity: 0.5;
+        --pattern-filter: none;
+        --img-filter: grayscale(100%) contrast(125%);
+        --img-opacity: 1;
+      }
+
+      [data-theme='dark'] {
+        /* Dark Mode (Ink Zen) */
+        --bg-main: #0D0D0D;       /* Deep Ink */
+        --bg-card: #111111;
+        --bg-secondary: #161616;
+        --bg-hover: #1A1A1A;
+        
+        --text-main: #E4E4DE;     /* Warm Gray/White */
+        --text-body: #A8A8A0;     /* Muted Stone */
+        --text-muted: #666660;    /* Dark Stone */
+        --text-faint: #2A2A2A;    /* Deep Gray */
+        
+        --border-main: #2A2A2A;
+        --border-strong: #8F8F86; /* Muted Stone Gray Highlight */
+        
+        --pattern-opacity: 0.05;
+        --pattern-filter: invert(1) brightness(0.5);
+        --img-filter: grayscale(100%) brightness(0.7) contrast(110%);
+        --img-opacity: 0.8;
+      }
+
+      html {
+        scroll-behavior: auto; /* Strict static */
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-body);
+        font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR', serif;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR', serif;
+        color: var(--text-main);
+        font-weight: 400;
+      }
+
+      /* Custom Scrollbar - Minimal */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-main);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-main); 
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-muted);
+      }
+
+      /* Typography Utilities */
+      .zen-text {
+        line-height: 2.0;
+        letter-spacing: 0.02em;
+      }
+
+      /* Strict No Animation Utility */
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+      
+      /* Link Hover Styles - Static */
+      a, button {
+        transition: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

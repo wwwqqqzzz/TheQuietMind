@@ -1,0 +1,7 @@
+{
+  "name": "Memento Mori Journal",
+  "description": "A minimalist, gothic reflective journal powered by Gemini for searching, seeing, and speaking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
